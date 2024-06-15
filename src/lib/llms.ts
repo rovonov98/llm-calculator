@@ -1,6 +1,7 @@
 export interface TLLM {
   name: string;
   group: string;
+  provider?: string;
   token_price: {
     input: number;
     output: number;
@@ -177,10 +178,37 @@ export const llms: TLLM[] = [
   },
   {
     group: "Meta",
-    name: "Llama 3 70B Instruct",
+    name: "llama-3-70b-instruct",
+    provider: "Deepinfra",
     token_price: {
-      input: 0.9,
-      output: 0.9,
+      input: 0.59,
+      output: 0.79,
+    },
+    context: {
+      total: 8_192,
+      message: 8_192,
+    },
+  },
+  {
+    group: "Meta",
+    name: "llama-3-8b-instruct",
+    provider: "Deepinfra",
+    token_price: {
+      input: 0.08,
+      output: 0.08,
+    },
+    context: {
+      total: 8_192,
+      message: 8_192,
+    },
+  },
+  {
+    group: "Meta",
+    name: "llama-3-8b",
+    provider: "Groq",
+    token_price: {
+      input: 0.05,
+      output: 0.1,
     },
     context: {
       total: 8_192,

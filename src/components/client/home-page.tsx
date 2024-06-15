@@ -19,6 +19,8 @@ import openaiLogo from "@/app/openai_logo.svg";
 import anthropicLogo from "@/app/anthropic_logo.png";
 import mistralLogo from "@/app/mistral_logo.svg";
 import metaLogo from "@/app/meta_logo.svg";
+import groqLogo from "@/app/groq_logo.png";
+import deepinfraLogo from "@/app/deepinfra_logo.webp";
 
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import Link from "next/link";
@@ -47,6 +49,12 @@ const groupToLogo = (name: string) => {
     }
     case "meta": {
       return metaLogo.src;
+    }
+    case "deepinfra": {
+      return deepinfraLogo.src;
+    }
+    case "groq": {
+      return groqLogo.src;
     }
     default: {
       return "";
@@ -260,7 +268,7 @@ export default function Home() {
       </header>
       <main className="flex w-full h-full flex-col items-center justify-between gap-4 p-2 md:p-10">
         <h1 className="text-4xl font-bold mb-8">LLM pricing calculator</h1>
-        <h2 className="max-w-[960px] text-lg font-bold text-center">
+        <h2 className="max-w-[960px] text-lg font-bold text-center mb-8">
           Calculate and compare the cost of using OpenAI Chatgpt, Anthropic
           Claude, Meta Llama 3, Google Gemini, and Mistral LLM APIs with this
           simple and powerful free calculator. Latest numbers as of June 2024.
@@ -376,6 +384,21 @@ export default function Home() {
                 <TableRow key={llm.name + index}>
                   <TableCell className="font-medium">
                     <div className="flex gap-2 items-center">
+                      {llm.provider ? (
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={groupToLogo(llm.provider)}
+                            alt={llm.provider}
+                            title={llm.provider}
+                            decoding="async"
+                            width={20}
+                            height={20}
+                            style={{ height: 20, width: 20 }}
+                          />
+                          +
+                        </>
+                      ) : null}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={groupToLogo(llm.group)}
