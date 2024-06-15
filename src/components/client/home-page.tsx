@@ -267,7 +267,9 @@ export default function Home() {
         Calculator
       </header>
       <main className="flex w-full h-full flex-col items-center justify-between gap-4 p-2 md:p-10">
-        <h1 className="text-4xl font-bold mb-8">LLM pricing calculator</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          LLM pricing calculator
+        </h1>
         <h2 className="max-w-[960px] text-lg font-bold text-center mb-8">
           Calculate and compare the cost of using OpenAI Chatgpt, Anthropic
           Claude, Meta Llama 3, Google Gemini, and Mistral LLM APIs with this
