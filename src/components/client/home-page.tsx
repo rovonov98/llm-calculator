@@ -440,6 +440,85 @@ export default function Home() {
             </TableBody>
           </Table>
         </div>
+        <div className="text-wrapper mt-20 max-w-[1024px]">
+          <h2>AI model pricing: Guide to GPT-4, Claude 3, Gemini, and more</h2>
+          <p>
+            Lots of companies like OpenAI, Google, Meta, and more make special
+            computer programs called AI models. These models can chat with you,
+            write stories, and answer questions. Here’s a simple way to
+            understand how they decide how much it costs to use these models.
+          </p>
+          <h3>What is GPT token?</h3>
+          <p>
+            {`Imagine tokens like pieces of a puzzle. Each token is a small part of a
+        word. For example, 1,000 tokens are about 750 words. If we say "This
+        sentence is 5 tokens," it means the sentence is made up of 5 small
+        pieces, or tokens.`}
+          </p>
+          <p>
+            A good way to remember is that one token is about four letters long.
+            So, one token is usually a little less than a whole word.
+          </p>
+          <h3>What is Context Length?</h3>
+          <p>
+            {`When talking about AI models, you’ll hear about "context length." This
+        is like the model’s memory span. It’s how much information the model can
+        remember at one time.`}
+          </p>
+          <p>
+            Context length is the amount of information or the number of tokens
+            a model can keep in mind while it’s working. If a model has a
+            context length of 8,000 tokens, it can remember 8,000 tokens worth
+            of information in one go.
+          </p>
+          <h3>Why Does Context Length Matter?</h3>
+          <ol>
+            <li>
+              <b>Doing Complex Tasks: </b> If the model has a longer memory, it
+              can handle bigger tasks, like summarizing a long article or
+              answering detailed questions.
+            </li>
+            <li>
+              <b>Remembering Conversations: </b> In a chat, a longer memory
+              helps the model remember more of the conversation, making it
+              better at replying.
+            </li>
+            <li>
+              <b>Cost: </b>
+              Models with longer memory usually cost more because they need more
+              computer power.
+            </li>
+          </ol>
+          <h3>AI models comparison</h3>
+          <p>Here are some popular AI models and what makes them special:</p>
+          <h4>OpenAI GPT-4</h4>
+          <p>
+            {`Known for its smartness, GPT-4 can handle tough questions and tasks. It’s slower and costs more, but there's a cheaper, faster version called GPT-4 Turbo.`}
+          </p>
+          <h4>OpenAI GPT-3.5 Turbo</h4>
+          <p>
+            {`Ideal for chatting, GPT-3.5 Turbo is fast and affordable. It’s perfect for making chatbots.`}
+          </p>
+          <h4>{"Anthropic's Claude 3"}</h4>
+          <p>
+            {`Available in three versions with different abilities. The most powerful is Opus, and the most affordable is Haiku. Claude 3 models can remember up to 200K tokens.`}
+          </p>
+          <h4>Llama 3 by Meta</h4>
+          <p>
+            {`Free to use and great for many tasks like writing and answering questions. It’s powerful yet cost-effective.`}
+          </p>
+          <h4>{"Google's Gemini"}</h4>
+          <p>
+            {`These models can handle text, pictures, and even videos. The best one is called Gemini Ultra. There are other versions like Gemini Pro which are also very powerful. Gemini models can remember up to 1 million tokens.`}
+          </p>
+          <h4>Mistral AI</h4>
+          <p>
+            {`Known for making small, fast models that are cheap to use. Their models, like Mistral 7B and Mixtral 8x7B, offer great performance for their price and can handle many tasks.`}
+          </p>
+
+          <h3>Conclusion</h3>
+          <p>{`Understanding the pricing and capabilities of different AI models is crucial for choosing the right one for your needs. Whether you need a model for chatting, complex problem-solving, or handling multiple types of media, there is an option available to fit your budget and requirements. Consider the token usage and context length to make an informed decision that balances performance and cost.`}</p>
+        </div>
       </main>
     </>
   );
