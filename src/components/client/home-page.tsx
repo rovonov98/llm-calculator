@@ -207,6 +207,7 @@ export default function Home() {
   const sortingButton = (field: string) => {
     return (
       <Button
+        name={"sort by " + field}
         size="icon"
         variant={sortBy === field ? "default" : "ghost"}
         onClick={() => {
