@@ -74,7 +74,18 @@ export const llms: TLLM[] = [
       message: 4096,
     },
   },
-
+  {
+    group: "Anthropic",
+    name: "Claude 3.5 Sonnet",
+    token_price: {
+      input: 3,
+      output: 15,
+    },
+    context: {
+      total: 200_000,
+      message: 0,
+    },
+  },
   {
     group: "Anthropic",
     name: "Claude 3 Opus",
